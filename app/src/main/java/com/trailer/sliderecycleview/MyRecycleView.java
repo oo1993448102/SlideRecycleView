@@ -84,7 +84,7 @@ public class MyRecycleView extends RecyclerView {
                     if (canScrollHorizontally && Math.abs(dx) > mTouchSlop && (Math.abs(dx) >= Math.abs(dy) || canScrollVertically)) {
                         startScroll = true;
                     }
-                    if (canScrollVertically && Math.abs(dy) > mTouchSlop && (Math.abs(dy) >= Math.abs(dx) || canScrollHorizontally)) {
+                    if (canScrollVertically && Math.abs(dy) > mTouchSlop && (Math.abs(dy) >= Math.abs(dx) || canScrollHorizontally)) {   //重点 （内嵌横划时）
                         startScroll = true;
                     }
                     return startScroll && super.onInterceptTouchEvent(e);
