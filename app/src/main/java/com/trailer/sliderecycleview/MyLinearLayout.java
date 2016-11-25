@@ -1,7 +1,6 @@
 package com.trailer.sliderecycleview;
 
 import android.content.Context;
-import android.graphics.Rect;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.util.TypedValue;
@@ -87,7 +86,7 @@ public class MyLinearLayout extends LinearLayout {
                     itemLayout.scrollBy(newScrollX, 0);
                     Log.i("newScrollX", newScrollX + "");
                     Log.i("x", x + "");
-                    if(newScrollX>0){
+                    if(newScrollX>=0){
                         isOpen = true;
                     }else{
                         isOpen = false;
